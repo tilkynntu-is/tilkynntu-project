@@ -34,14 +34,14 @@
 
 ## Hlutverk / Roles
 
-+ **Frontend Developmers**
++ **Frontend Developers**
   - Developed by: [Name, Name]
   
     - HTML: The structure of the web pages, defining the content and layout.
     - CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
     - JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
 
-+ **Backend Developmers**
++ **Backend Developers**
   - Developed by: [Name, Name]
  
     - Python: The primary programming language used for server-side logic.
