@@ -1,5 +1,3 @@
-# tilkynntu.is
-
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3&logoColor=white)
