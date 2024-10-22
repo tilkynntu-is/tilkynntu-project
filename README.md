@@ -54,7 +54,7 @@ tilkynntu.is/
 ├── LICENSE
 ├── README.md
 ├── CONTRIBUTING.md
-└── Verkefni/
+└── Project/
     ├── backend/
     │   ├── app.py
     │   ├── requirements.txt
