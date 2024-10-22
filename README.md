@@ -9,6 +9,7 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu-project?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/tilkynntu-is/tilkynntu-project?style=social)
+![Viewers](https://img.shields.io/badge/viewers-%23000000?style=flat-square&logo=GitHub&logoColor=white)
 ![GitHub contributors](https://img.shields.io/github/contributors/tilkynntu-is/tilkynntu-project)
 ![License](https://img.shields.io/github/license/tilkynntu-is/tilkynntu-project)
 
