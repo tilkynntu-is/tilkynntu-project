@@ -6,10 +6,10 @@
 
 # tilkynntu.is
 
-![GitHub stars](https://img.shields.io/github/stars/tilkynntu-is/main?style=social)
-![GitHub forks](https://img.shields.io/github/forks/tilkynntu-is/main?style=social)
-![GitHub contributors](https://img.shields.io/github/contributors/tilkynntu-is/main)
-![License](https://img.shields.io/github/license/tilkynntu-is/main)
+![GitHub stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu-project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tilkynntu-is/tilkynntu-project?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/tilkynntu-is/tilkynntu-project)
+![License](https://img.shields.io/github/license/tilkynntu-is/tilkynntu-project)
 
 
 
