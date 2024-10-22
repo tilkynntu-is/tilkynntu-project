@@ -54,7 +54,6 @@ tilkynntu.is/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-├── CONTRIBUTING.md
 └── Project/
     ├── backend/
     │   ├── app.py
