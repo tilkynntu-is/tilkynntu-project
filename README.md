@@ -2,8 +2,7 @@
 ![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/SQL-4B8BBE?style=flat-square&logo=PostgreSQL&logoColor=white)
-
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4B8BBE?style=flat-square&logo=PostgreSQL&logoColor=white)
 
 # tilkynntu.is
 
