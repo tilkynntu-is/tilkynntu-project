@@ -49,7 +49,8 @@
 
 
 ## Slóð / Path
-```
+#### Setup: 
+```py
 tilkynntu.is/
 ├── .gitignore
 ├── LICENSE
