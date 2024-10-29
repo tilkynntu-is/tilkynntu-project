@@ -44,7 +44,7 @@
   - Developed by: [Name, Name]
  
     - Python: The primary programming language used for server-side logic.
-    - Flask: A micro web framework that simplifies the development of web applications.
+    - Django: A micro web framework that simplifies the development of web applications.
     - SQL Databases: Used for data storage, management, and retrieval.
 
 
