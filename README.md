@@ -45,7 +45,7 @@
  
     - Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
-    - SQL Databases: Used for data storage, management, and retrieval.
+    - PostgreSQL Databases: Used for data storage, management, and retrieval.
 
 
 ## Slóð / Path
