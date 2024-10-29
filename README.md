@@ -29,6 +29,7 @@
 > This project is developed and designed by students in Tækniskólinn Iceland. This website is for educational purposes only.
 
 
+## User Stories
 
 
 ## Hlutverk / Roles
@@ -46,6 +47,11 @@
     - Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
     - PostgreSQL Databases: Used for data storage, management, and retrieval.
+
+
+## WireFlows
+![wireframe](https://github.com/user-attachments/assets/8e6e69ff-f6cd-453b-9a37-79d8e034caaa)
+
 
 
 ## Slóð / Path
