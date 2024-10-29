@@ -92,7 +92,7 @@ tilkynntu.is/
             └── layout.html
 ```
 
-#### Setup: 
+### Step By Step Setup: 
 ```
 cd path\to\your\directory
 
