@@ -55,18 +55,26 @@ tilkynntu.is/
 ├── LICENSE
 ├── README.md
 └── Project/
+    ├── app.py
+    ├── config.py
+    ├── requirements.txt
     ├── backend/
+    │   ├── __init__.py
     │   ├── app.py
-    │   ├── requirements.txt
-    │   └── templates/
-    │       ├── index.html
+    │   ├── models.py
+    │   └── views.py
     └── frontend/
-        ├── css/
-        │   ├── styles.css
-        ├── js/
-        │   ├── scripts.js
-        └── assets/
-            └── images/
+        ├── static/
+        │   ├── css/
+        │   │   ├── styles.css
+        │   ├── js/
+        │   │   ├── scripts.js
+        │   └── images/
+        └── templates/
+            ├── index.html
+            ├── about.html
+            └── layout.html
+
 ```
 
 
