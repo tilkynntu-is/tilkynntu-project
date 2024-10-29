@@ -62,34 +62,31 @@ tilkynntu.is/
     │   ├── urls.py
     │   ├── wsgi.py
     │   └── asgi.py
-    └── myapp/
-    │    ├── migrations/
-    │    │   └── __init__.py
-    │    ├── __init__.py
-    │    ├── admin.py
-    │    ├── apps.py
-    │    ├── models.py
-    │    ├── tests.py
-    │    ├── views.py
-    │    ├── urls.py
-    │    └── templates/
-    │        └── myapp/
-    │            ├── home.html
-    │            └── about.html
+    ├── myapp/
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── views.py
+    │   ├── urls.py
+    │   └── migrations/
+    │       └── __init__.py
     ├── backend/
     │   ├── __init__.py
-    │   ├── manage.py
+    │   └── manage.py
     │   └── requirements.txt
     └── frontend/
         ├── static/
         │   ├── css/
-        │   │   ├── styles.css
+        │   │   └── styles.css
         │   ├── js/
-        │   │   ├── scripts.js
+        │   │   └── scripts.js
         │   └── images/
         └── templates/
             ├── index.html
             └── layout.html
+
 ```
 
 ### Step By Step Setup: 
