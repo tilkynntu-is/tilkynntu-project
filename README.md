@@ -55,14 +55,31 @@ tilkynntu.is/
 ├── LICENSE
 ├── README.md
 └── Project/
-    ├── app.py
-    ├── config.py
-    ├── requirements.txt
+    ├── manage.py
+    ├── myproject/
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    │   └── asgi.py
+    └── myapp/
+    │    ├── migrations/
+    │    │   └── __init__.py
+    │    ├── __init__.py
+    │    ├── admin.py
+    │    ├── apps.py
+    │    ├── models.py
+    │    ├── tests.py
+    │    ├── views.py
+    │    ├── urls.py
+    │    └── templates/
+    │        └── myapp/
+    │            ├── home.html
+    │            └── about.html
     ├── backend/
     │   ├── __init__.py
-    │   ├── app.py
-    │   ├── models.py
-    │   └── views.py
+    │   ├── manage.py
+    │   └── requirements.txt
     └── frontend/
         ├── static/
         │   ├── css/
@@ -72,8 +89,8 @@ tilkynntu.is/
         │   └── images/
         └── templates/
             ├── index.html
-            ├── about.html
             └── layout.html
+
 
 ```
 
