@@ -49,7 +49,6 @@
 
 
 ## Slóð / Path
-#### Setup: 
 ```py
 tilkynntu.is/
 ├── .gitignore
@@ -91,8 +90,10 @@ tilkynntu.is/
         └── templates/
             ├── index.html
             └── layout.html
-
-
 ```
 
+#### Setup: 
+```
+cd path/to/your/directory && mkdir -p tilkynntu.is/Project/myproject tilkynntu.is/Project/myapp/migrations tilkynntu.is/Project/backend tilkynntu.is/Project/frontend/static/css tilkynntu.is/Project/frontend/static/js tilkynntu.is/Project/frontend/static/images tilkynntu.is/Project/frontend/templates/myapp && touch tilkynntu.is/.gitignore tilkynntu.is/LICENSE tilkynntu.is/README.md tilkynntu.is/Project/manage.py tilkynntu.is/Project/myproject/__init__.py tilkynntu.is/Project/myproject/settings.py tilkynntu.is/Project/myproject/urls.py tilkynntu.is/Project/myproject/wsgi.py tilkynntu.is/Project/myproject/asgi.py tilkynntu.is/Project/myapp/__init__.py tilkynntu.is/Project/myapp/admin.py tilkynntu.is/Project/myapp/apps.py tilkynntu.is/Project/myapp/models.py tilkynntu.is/Project/myapp/tests.py tilkynntu.is/Project/myapp/views.py tilkynntu.is/Project/myapp/urls.py tilkynntu.is/Project/myapp/migrations/__init__.py tilkynntu.is/Project/myapp/templates/myapp/home.html tilkynntu.is/Project/myapp/templates/myapp/about.html tilkynntu.is/Project/backend/__init__.py tilkynntu.is/Project/backend/manage.py tilkynntu.is/Project/backend/requirements.txt tilkynntu.is/Project/frontend/templates/index.html tilkynntu.is/Project/frontend/templates/layout.html tilkynntu.is/Project/frontend/static/css/styles.css tilkynntu.is/Project/frontend/static/js/scripts.js
 
+```
