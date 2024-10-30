@@ -30,17 +30,17 @@
 > This project is developed and designed by students in Tækniskólinn Iceland. This website is for educational purposes only.
 
 
-### User Stories
+### User Stories:
 As a Resident, I want to be able to report local issues quickly so they can be resolved by the city.
 This allows residents to contribute to the upkeep and safety of their community, promoting a sense of involvement.
 
-### Scenarios
+### Scenarios:
 Who: A resident sees a large pothole on a busy road.
 What: They open the tilkynntu.is app, go to "Report an Issue," select "Road Issue," upload a photo, tag the location, and submit the report with a short description.
 Why: They want the city to address the hazard quickly to improve road safety for all residents.
 
 
-## Hlutverk / Roles
+## Hlutverk / Roles:
 
 + **Frontend Developers**
   - Developed by: [ Tryggvi ]
@@ -57,12 +57,12 @@ Why: They want the city to address the hazard quickly to improve road safety for
     - PostgreSQL Databases: Used for data storage, management, and retrieval.
 
 
-## WireFlows
+## WireFlows:
 ![wireframe](https://github.com/user-attachments/assets/8e6e69ff-f6cd-453b-9a37-79d8e034caaa)
 
 
 
-## Slóð / Path
+## Slóð / Path:
 ```py
 tilkynntu.is/
 ├── .gitignore
