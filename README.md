@@ -42,7 +42,7 @@ This allows residents to contribute to the upkeep and safety of their community,
 ## Hlutverk / Roles:
 
 + **Frontend Developers**
-  - Developed by: [ Tryggvi ]
+  - Developed by: 
   
     - HTML: The structure of the web pages, defining the content and layout.
     - CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
