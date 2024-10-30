@@ -36,14 +36,14 @@
 ## Hlutverk / Roles
 
 + **Frontend Developers**
-  - Developed by: [Name, Name]
+  - Developed by: [Tryggvi]
   
     - HTML: The structure of the web pages, defining the content and layout.
     - CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
     - JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
 
 + **Backend Developers**
-  - Developed by: [Name, Name]
+  - Developed by: [Hinrik, Ingþór]
  
     - Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
