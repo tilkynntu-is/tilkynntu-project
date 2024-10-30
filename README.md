@@ -1,10 +1,3 @@
-![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4B8BBE?style=flat-square&logo=PostgreSQL&logoColor=white)
-![Django](https://img.shields.io/badge/Django-3.2%2B-green?style=flat&logo=django&logoColor=white)
-
 # tilkynntu.is
 
 ![GitHub stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu-project?style=social)
@@ -12,7 +5,12 @@
 ![Viewers](https://img.shields.io/badge/viewers-0-%23000000?style=flat-square&logo=GitHub&logoColor=white)
 ![GitHub contributors](https://img.shields.io/github/contributors/tilkynntu-is/tilkynntu-project)
 ![License](https://img.shields.io/github/license/tilkynntu-is/tilkynntu-project)
-
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4B8BBE?style=flat-square&logo=PostgreSQL&logoColor=white)
+![Django](https://img.shields.io/badge/Django-3.2%2B-green?style=flat&logo=django&logoColor=white)
 
 
 ### Íslenska:
