@@ -51,7 +51,7 @@ This allows residents to contribute to the upkeep and safety of their community,
 + **Backend Developers**
   - Developed by: [ Hinrik, Ingþór ]
  
-    - ![Python]Python: The primary programming language used for server-side logic.
+    - ![](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white) Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
     - PostgreSQL Databases: Used for data storage, management, and retrieval.
 
