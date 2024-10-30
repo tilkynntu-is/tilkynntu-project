@@ -42,14 +42,14 @@ This allows residents to contribute to the upkeep and safety of their community,
 ## Hlutverk / Roles:
 
 + **Frontend Developers**
-  - Developed by: 
+  - Developed by: [ @tryggvi321 ]
   
     - HTML: The structure of the web pages, defining the content and layout.
     - CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
     - JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
 
 + **Backend Developers**
-  - Developed by: [ Hinrik, Ingthor ]
+  - Developed by: [ @hinrikfp, @Ingthor06  ]
  
     - Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
