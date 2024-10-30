@@ -57,7 +57,8 @@ This allows residents to contribute to the upkeep and safety of their community,
 
 
 ## WireFlows:
-![wireframe](https://github.com/user-attachments/assets/8e6e69ff-f6cd-453b-9a37-79d8e034caaa)
+![wireframe](https://github.com/user-attachments/assets/195fdf20-d5fb-4a4d-8d84-c1ba9d250ef8)
+
 
 
 
