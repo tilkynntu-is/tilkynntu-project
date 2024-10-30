@@ -49,7 +49,7 @@ This allows residents to contribute to the upkeep and safety of their community,
     - JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
 
 + **Backend Developers**
-  - Developed by: [ Hinrik, Ingþór ]
+  - Developed by: [ Hinrik, Ingthor ]
  
     - Python: The primary programming language used for server-side logic.
     - Django: A micro web framework that simplifies the development of web applications.
