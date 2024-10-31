@@ -70,39 +70,35 @@ tilkynntu.is/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-└── Project/
-    ├── manage.py
-    ├── myproject/
-    │   ├── __init__.py
-    │   ├── settings.py
-    │   ├── urls.py
-    │   ├── wsgi.py
-    │   └── asgi.py
-    ├── myapp/
-    │   ├── __init__.py
-    │   ├── admin.py
-    │   ├── apps.py
-    │   ├── models.py
-    │   ├── tests.py
-    │   ├── views.py
-    │   ├── urls.py
-    │   └── migrations/
-    │       └── __init__.py
-    ├── backend/
-    │   ├── __init__.py
-    │   └── manage.py
-    │   └── requirements.txt
-    └── frontend/
-        ├── static/
-        │   ├── css/
-        │   │   └── styles.css
-        │   ├── js/
-        │   │   └── scripts.js
-        │   └── images/
-        └── templates/
-            ├── index.html
-            └── layout.html
-
+├── backend/
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── myproject/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── asgi.py
+│   └── myapp/
+│       ├── __init__.py
+│       ├── admin.py
+│       ├── apps.py
+│       ├── models.py
+│       ├── tests.py
+│       ├── views.py
+│       ├── urls.py
+│       └── migrations/
+│           └── __init__.py
+└── frontend/
+    ├── static/
+    │   ├── css/
+    │   │   └── styles.css
+    │   ├── js/
+    │   │   └── scripts.js
+    │   └── images/
+    └── templates/
+        ├── index.html
+        └── layout.html
 ```
 
 ### Step By Step Setup: 
