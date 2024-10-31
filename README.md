@@ -94,7 +94,7 @@ tilkynntu.is/
 ```
 
 ### Step By Step Setup: 
-```py
+```
 1. Open Git Bash or Command Prompt
 Launch Git Bash on your computer.
 
