@@ -46,16 +46,16 @@ This allows residents to contribute to the upkeep and safety of their community,
 + **Frontend Developers**
   - Developed by: @tryggvi321, @Ingthor06
   
-    - HTML: The structure of the web pages, defining the content and layout.
-    - CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
-    - JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
+    - 👷‍♂️ HTML: The structure of the web pages, defining the content and layout.
+    - 🎨 CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
+    - 📝 JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
 
 + **Backend Developers**
   - Developed by: @hinrikfp, @Ingthor06 
  
-    - Python: The primary programming language used for server-side logic.
-    - Django: A micro web framework that simplifies the development of web applications.
-    - PostgreSQL Databases: Used for data storage, management, and retrieval.
+    - 🐍 Python: The primary programming language used for server-side logic.
+    - 📗 Django: A micro web framework that simplifies the development of web applications.
+    - 🐘 PostgreSQL Databases: Used for data storage, management, and retrieval.
 
 
 ## WireFlows:
