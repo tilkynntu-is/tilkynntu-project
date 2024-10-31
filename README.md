@@ -67,38 +67,30 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## Slóð / Path:
 ```py
 tilkynntu.is/
-├── .gitignore
-├── LICENSE
-├── README.md
-├── backend/
-│   ├── manage.py
-│   ├── requirements.txt
-│   ├── myproject/
-│   │   ├── __init__.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   ├── wsgi.py
-│   │   └── asgi.py
-│   └── myapp/
-│       ├── __init__.py
-│       ├── admin.py
-│       ├── apps.py
-│       ├── models.py
-│       ├── tests.py
-│       ├── views.py
-│       ├── urls.py
-│       └── migrations/
-│           └── __init__.py
-└── frontend/
-    ├── static/
-    │   ├── css/
-    │   │   └── styles.css
-    │   ├── js/
-    │   │   └── scripts.js
-    │   └── images/
-    └── templates/
-        ├── index.html
-        └── layout.html
+├── .gitignore                # Specifies files and directories to ignore in version control
+├── LICENSE                   # License for your project
+├── README.md                 # Documentation and instructions for your project
+├── backend/                  # Directory for the backend code
+│   ├── manage.py             # Command-line utility for managing the Django project
+│   ├── requirements.txt      # List of dependencies for the backend
+│   ├── myproject/            # Main Django project package
+│   │   ├── __init__.py       # Marks the directory as a package
+│   │   ├── settings.py       # Django settings file
+│   │   ├── urls.py           # URL configurations for the project
+│   │   ├── wsgi.py           # WSGI entry point for deployment
+│   │   └── asgi.py           # ASGI entry point for deployment
+│   └── migrations/           # Directory for database migrations
+│        └── __init__.py      # Marks the migrations directory as a package
+└── frontend/                 # Directory for the frontend code
+    ├── static/               # Static files (CSS, JS, images)
+    │   ├── css/              # CSS files
+    │   │   └── styles.css     # Main stylesheet
+    │   ├── js/               # JavaScript files
+    │   │   └── scripts.js      # Main script
+    │   └── images/           # Directory for images
+    └── templates/            # HTML templates
+        ├── index.html        # Main landing page
+        └── layout.html       # Base layout for other templates
 ```
 
 ### Step By Step Setup: 
