@@ -54,7 +54,7 @@ This allows residents to contribute to the upkeep and safety of their community,
   - Developed by: @hinrikfp, @Ingthor06 
  
     - 🐍 Python: The primary programming language used for server-side logic.
-    - 📗 Django: A micro web framework that simplifies the development of web applications.
+    - ⚙️ Django: A micro web framework that simplifies the development of web applications.
     - 🐘 PostgreSQL Databases: Used for data storage, management, and retrieval.
 
 
