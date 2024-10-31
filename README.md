@@ -95,14 +95,20 @@ tilkynntu.is/
 
 ### Step By Step Setup: 
 ```py
-1. open git
+1. Open Git Bash or Command Prompt
+Launch Git Bash on your computer.
+
+2. Navigate to Your Desired Directory
 cd path\to\your\directory
 ---
-2. git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
+2. Clone the Repository
+git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
 ---
-3. cd tilkynntu.is-repo\
+3. Change Directory into the Cloned Repository
+cd tilkynntu.is-repo\
 ---
-4. git pull
+4. Pull the Latest Changes
+git pull
 ```
 > [!IMPORTANT]
 > This command should be executed by moderators only, as it establishes the directory path structure for our website.
