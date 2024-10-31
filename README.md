@@ -96,7 +96,7 @@ tilkynntu.is/
 ### Step By Step Setup: 
 
 1. Open Git Bash or Command Prompt
-  + Launch Git Bash on your computer.
+     + Launch Git Bash on your computer.
 
 2. Navigate to Your Desired Directory
 ```
