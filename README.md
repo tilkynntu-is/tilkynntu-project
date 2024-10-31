@@ -103,7 +103,7 @@ tilkynntu.is/
 $ cd path\to\your\directory
 ```
 
-2. Clone the Repository
+3. Clone the Repository
 ```
 $ git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
 ```
@@ -113,7 +113,7 @@ $ git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
 $ cd tilkynntu.is-repo\
 ```
 
-4. Pull the Latest Changes
+5. Pull the Latest Changes
 ```
 $ git pull
 ```
