@@ -1,5 +1,7 @@
 # tilkynntu.is
 
+![Taekniskolinn](https://img.shields.io/badge/Taekniskolinn-<color>?style=for-the-badge&logo=<logo>&logoColor=white)
+
 ![GitHub stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu-project?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/tilkynntu-is/tilkynntu-project?style=social)
 ![Viewers](https://img.shields.io/badge/viewers-0-%23000000?style=flat-square&logo=GitHub&logoColor=white)
