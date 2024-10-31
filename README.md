@@ -94,7 +94,7 @@ tilkynntu.is/
 ```
 
 ### Step By Step Setup: 
-```
+```py
 1. open git
 cd path\to\your\directory
 ---
