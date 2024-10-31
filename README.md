@@ -32,8 +32,8 @@
 
 
 ### User Stories:
-As a Resident, I want to be able to report local issues quickly so they can be resolved by the city.
-This allows residents to contribute to the upkeep and safety of their community, promoting a sense of involvement.
+__As a Resident, I want to be able to report local issues quickly so they can be resolved by the city.
+This allows residents to contribute to the upkeep and safety of their community, promoting a sense of involvement.__
 
 ### User Scenarios:
 **Who:** A resident sees a large pothole on a busy road.
