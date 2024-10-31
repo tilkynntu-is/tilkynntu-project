@@ -95,9 +95,14 @@ tilkynntu.is/
 
 ### Step By Step Setup: 
 ```
+1. open git
 cd path\to\your\directory
-
-mkdir tilkynntu.is\backend\migrations\tilkynntu.is\frontend\static\css\tilkynntu.is\frontend\static\js\tilkynntu.is\frontend\static\images\tilkynntu.is\frontend\templates && echo.> tilkynntu.is\backend\manage.py && echo.> tilkynntu.is\backend\requirements.txt && echo.> tilkynntu.is\backend\myproject\__init__.py && echo.> tilkynntu.is\backend\myproject\settings.py && echo.> tilkynntu.is\backend\myproject\urls.py && echo.> tilkynntu.is\backend\myproject\wsgi.py && echo.> tilkynntu.is\backend\myproject\asgi.py && echo.> tilkynntu.is\frontend\static\css\styles.css && echo.> tilkynntu.is\frontend\static\js\scripts.js && echo.> tilkynntu.is\frontend\templates\index.html && echo.> tilkynntu.is\frontend\templates\layout.html
+---
+2. git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
+---
+3. cd tilkynntu.is-repo\
+---
+4. git pull
 ```
 > [!IMPORTANT]
 > This command should be executed by moderators only, as it establishes the directory path structure for our website.
