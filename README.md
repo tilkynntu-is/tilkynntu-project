@@ -66,7 +66,7 @@ _**Who:** A resident sees a large pothole on a busy road.
 
 ## Slóð / Path:
 ```py
-tilkynntu.is/
+tilkynntu.is-repo/
 ├── .gitignore                
 ├── LICENSE                   
 ├── README.md                 
