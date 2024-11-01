@@ -72,7 +72,8 @@ tilkynntu.is/
 ├── README.md                 
 ├── backend/                  
 │   ├── manage.py             
-│   ├── requirements.txt      
+│   ├── requirements.txt 
+│   ├── api/
 │   └── tilkynntu_is/            
 │       ├── __init__.py       
 │       ├── settings.py       
