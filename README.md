@@ -90,8 +90,7 @@ tilkynntu.is/
     │   └── assets/
     │       └── images/
     └── templates/            
-        ├── index.html        
-        └── layout.html       
+        └── index.html               
 ```
 
 ### Step By Step Setup: 
