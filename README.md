@@ -62,47 +62,48 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## Database:
 ### Tables:
 
-| Table Name       | Column Name    | Data Type          | Description                                                       |
-|------------------|----------------|--------------------|-------------------------------------------------------------------|
-| users            | id             | INT (Primary Key)  | Auto-incrementing unique ID for each user                         |
-|                  | username       | VARCHAR(255)       | Username for the user                                             |
-|                  | email          | VARCHAR(255)       | Email address of the user                                         |
-|                  | password       | VARCHAR(255)       | Hashed password for security                                      |
-|                  | first_name     | VARCHAR(255)       | User's first name                                                 |
-|                  | last_name      | VARCHAR(255)       | User's last name                                                  |
-|                  | date_joined    | TIMESTAMP          | The date the user joined                                          |
+| Table Name       | Column Name    | Description                                                       |
+|------------------|----------------|-------------------------------------------------------------------|
+| users            | id             | Auto-incrementing unique ID for each user                         |
+|                  | username       | Username for the user                                             |
+|                  | email          | Email address of the user                                         |
+|                  | password       | Hashed password for security                                      |
+|                  | first_name     | User's first name                                                 |
+|                  | last_name      | User's last name                                                  |
+|                  | date_joined    | The date the user joined                                          |
 
-| Table Name       | Column Name    | Data Type          | Description                                                       |
-|------------------|----------------|--------------------|-------------------------------------------------------------------|
-| reports          | id             | INT (Primary Key)  | Auto-incrementing unique ID for each report                       |
-|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who reported the issue)     |
-|                  | location       | VARCHAR(255)       | Location of the problem (e.g., address, area)                     |
-|                  | description    | TEXT               | Detailed description of the problem                               |
-|                  | created_at     | TIMESTAMP          | When the report was created                                       |
-|                  | status         | VARCHAR(50)        | Status of the report (e.g., 'open', 'closed', 'in progress')     |
+| Table Name       | Column Name    | Description                                                       |
+|------------------|----------------|-------------------------------------------------------------------|
+| reports          | id             | Auto-incrementing unique ID for each report                       |
+|                  | user_id        | Reference to the `users` table (user who reported the issue)     |
+|                  | location       | Location of the problem (e.g., address, area)                     |
+|                  | description    | Detailed description of the problem                               |
+|                  | created_at     | When the report was created                                       |
+|                  | status         | Status of the report (e.g., 'open', 'closed', 'in progress')     |
 
-| Table Name       | Column Name    | Data Type          | Description                                                       |
-|------------------|----------------|--------------------|-------------------------------------------------------------------|
-| images           | id             | INT (Primary Key)  | Auto-incrementing unique ID for each image                        |
-|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this image is attached to) |
-|                  | image_url      | VARCHAR(255)       | URL or path to the image file                                     |
-|                  | uploaded_at    | TIMESTAMP          | When the image was uploaded                                       |
+| Table Name       | Column Name    | Description                                                       |
+|------------------|----------------|-------------------------------------------------------------------|
+| images           | id             | Auto-incrementing unique ID for each image                        |
+|                  | report_id      | Reference to the `reports` table (the report this image is attached to) |
+|                  | image_url      | URL or path to the image file                                     |
+|                  | uploaded_at    | When the image was uploaded                                       |
 
-| Table Name       | Column Name    | Data Type          | Description                                                       |
-|------------------|----------------|--------------------|-------------------------------------------------------------------|
-| comments         | id             | INT (Primary Key)  | Auto-incrementing unique ID for each comment                      |
-|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who made the comment)        |
-|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this comment is attached to) |
-|                  | comment        | TEXT               | Content of the comment                                            |
-|                  | created_at     | TIMESTAMP          | When the comment was created                                      |
+| Table Name       | Column Name    | Description                                                       |
+|------------------|----------------|-------------------------------------------------------------------|
+| comments         | id             | Auto-incrementing unique ID for each comment                      |
+|                  | user_id        | Reference to the `users` table (user who made the comment)        |
+|                  | report_id      | Reference to the `reports` table (the report this comment is attached to) |
+|                  | comment        | Content of the comment                                            |
+|                  | created_at     | When the comment was created                                      |
 
-| Table Name       | Column Name    | Data Type          | Description                                                       |
-|------------------|----------------|--------------------|-------------------------------------------------------------------|
-| likes_dislikes   | id             | INT (Primary Key)  | Auto-incrementing unique ID                                        |
-|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (the user who liked/disliked)     |
-|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report being liked or disliked) |
-|                  | type           | VARCHAR(10)        | Either 'like' or 'dislike'                                        |
-|                  | created_at     | TIMESTAMP          | When the like/dislike was made                                    |
+| Table Name       | Column Name    | Description                                                       |
+|------------------|----------------|-------------------------------------------------------------------|
+| likes_dislikes   | id             | Auto-incrementing unique ID                                        |
+|                  | user_id        | Reference to the `users` table (the user who liked/disliked)     |
+|                  | report_id      | Reference to the `reports` table (the report being liked or disliked) |
+|                  | type           | Either 'like' or 'dislike'                                        |
+|                  | created_at     | When the like/dislike was made                                    |
+
 
 
 
