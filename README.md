@@ -79,7 +79,6 @@ _**Who:** A resident sees a large pothole on a busy road.
 |                  | location       | Location of the problem (e.g., address, area)                     |
 |                  | description    | Detailed description of the problem                               |
 |                  | created_at     | When the report was created                                       |
-|                  | status         | Status of the report (e.g., 'open', 'closed', 'in progress')     |
 
 | Table Name       | Column Name    | Description                                                       |
 |------------------|----------------|-------------------------------------------------------------------|
