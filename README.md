@@ -94,31 +94,3 @@ tilkynntu.is-repo/
     └── templates/            
         └── index.html               
 ```
-
-### Step By Step Setup: 
-
-1. Open Git Bash or Command Prompt
-     + Launch Git Bash on your computer.
-
-2. Navigate to Your Desired Directory
-```
-$ cd path\to\your\directory
-```
-
-3. Clone the Repository
-```
-$ git clone https://github.com/tilkynntu-is/tilkynntu.is-repo.git
-```
-
-4. Change Directory into the Cloned Repository
-```
-$ cd tilkynntu.is-repo\
-```
-
-5. Pull the Latest Changes
-```
-$ git pull
-```
-
-> [!IMPORTANT]
-> This command should be executed by moderators only, as it establishes the directory path structure for our website.
