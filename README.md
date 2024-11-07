@@ -50,6 +50,7 @@ _**Who:** A resident sees a large pothole on a busy road.
     - 🎨 CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
     - 📝 JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
     - HTMX: A JavaScript library designed to be an extension of html for creating reactive websites
+    - Tailwind: A css utility class collection for writing css in your html files.
 
 + **Backend Developers**
   - Developed by: @hinrikfp, @Ingthor06 
