@@ -73,21 +73,25 @@ _**Who:** A resident sees a large pothole on a busy road.
 |                  | first_name     | VARCHAR(255)       | User's first name                                                 |
 |                  | last_name      | VARCHAR(255)       | User's last name                                                  |
 |                  | date_joined    | TIMESTAMP          | The date the user joined                                          |
+| Table Name       | Column Name    | Data Type          | Description                                                       |
 | reports          | id             | INT (Primary Key)  | Auto-incrementing unique ID for each report                       |
 |                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who reported the issue)     |
 |                  | location       | VARCHAR(255)       | Location of the problem (e.g., address, area)                     |
 |                  | description    | TEXT               | Detailed description of the problem                               |
 |                  | created_at     | TIMESTAMP          | When the report was created                                       |
 |                  | status         | VARCHAR(50)        | Status of the report (e.g., 'open', 'closed', 'in progress')     |
+| Table Name       | Column Name    | Data Type          | Description                                                       |
 | images           | id             | INT (Primary Key)  | Auto-incrementing unique ID for each image                        |
 |                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this image is attached to) |
 |                  | image_url      | VARCHAR(255)       | URL or path to the image file                                     |
 |                  | uploaded_at    | TIMESTAMP          | When the image was uploaded                                       |
+| Table Name       | Column Name    | Data Type          | Description                                                       |
 | comments         | id             | INT (Primary Key)  | Auto-incrementing unique ID for each comment                      |
 |                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who made the comment)        |
 |                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this comment is attached to) |
 |                  | comment        | TEXT               | Content of the comment                                            |
 |                  | created_at     | TIMESTAMP          | When the comment was created                                      |
+| Table Name       | Column Name    | Data Type          | Description                                                       |
 | likes_dislikes   | id             | INT (Primary Key)  | Auto-incrementing unique ID                                        |
 |                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (the user who liked/disliked)     |
 |                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report being liked or disliked) |
