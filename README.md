@@ -88,7 +88,7 @@ tilkynntu.is-repo/
 ├── backend/                  
 │   ├── manage.py             
 │   ├── requirements.txt
-│   ├── database/
+│   ├── migrations/
 │   ├── api/
 │   └── tilkynntu_is/            
 │       ├── __init__.py       
