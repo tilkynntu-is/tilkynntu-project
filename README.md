@@ -49,12 +49,13 @@ _**Who:** A resident sees a large pothole on a busy road.
     - 👷‍♂️ HTML: The structure of the web pages, defining the content and layout.
     - 🎨 CSS: The styling of the web pages, ensuring a responsive and visually appealing user interface.
     - 📝 JavaScript: The dynamic elements of the web application, enhancing user interactions and functionality.
+    - HTMX: A JavaScript library designed to be an extension of html for creating reactive websites
 
 + **Backend Developers**
   - Developed by: @hinrikfp, @Ingthor06 
  
-    - 🐍 Python: The primary programming language used for server-side logic.
-    - 📗 Django: A micro web framework that simplifies the development of web applications.
+    - 🐍 Python: The primary programming language used for server-side logic. We picked python because all of us know it and its easy to work with.
+    - 📗 Django: A powerful python web framework for creating web apps. We picked Django because of it's many features and to learn something new.
     - 🐘 PostgreSQL Databases: Used for data storage, management, and retrieval.
 
 
