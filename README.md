@@ -61,17 +61,15 @@ _**Who:** A resident sees a large pothole on a busy road.
 
 ## Database:
 ### Tables:
-+ **users**
-  - id
-  - name
-  - reports
-  - score
-+ **reports**
-  - id
-  - location
-  - img_link
-  - likes
-  - dislikes
+
+| Table Name       | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| users            | Stores the data for users of the website, including their personal information. |
+| reports          | Stores the reports submitted by users, including the problem description, location, and status. |
+| images           | Stores images uploaded for the reported problems, including file paths or URLs. |
+| comments         | Stores comments and discussions related to reports, made by users.          |
+| likes_dislikes   | Stores the likes and dislikes given by users to reports, indicating user reactions. |
+
 
 ## WireFlows:
 ![wireframe](https://github.com/user-attachments/assets/195fdf20-d5fb-4a4d-8d84-c1ba9d250ef8)
