@@ -62,13 +62,38 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## Database:
 ### Tables:
 
-| Table Name       | Description                                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| users            | Stores the data for users of the website, including their personal information. |
-| reports          | Stores the reports submitted by users, including the problem description, location, and status. |
-| images           | Stores images uploaded for the reported problems, including file paths or URLs. |
-| comments         | Stores comments and discussions related to reports, made by users.          |
-| likes_dislikes   | Stores the likes and dislikes given by users to reports, indicating user reactions. |
+# Tables and Data Types for tilkynntu.is
+
+| Table Name       | Column Name    | Data Type          | Description                                                       |
+|------------------|----------------|--------------------|-------------------------------------------------------------------|
+| users            | id             | INT (Primary Key)  | Auto-incrementing unique ID for each user                         |
+|                  | username       | VARCHAR(255)       | Username for the user                                             |
+|                  | email          | VARCHAR(255)       | Email address of the user                                         |
+|                  | password       | VARCHAR(255)       | Hashed password for security                                      |
+|                  | first_name     | VARCHAR(255)       | User's first name                                                 |
+|                  | last_name      | VARCHAR(255)       | User's last name                                                  |
+|                  | date_joined    | TIMESTAMP          | The date the user joined                                          |
+| reports          | id             | INT (Primary Key)  | Auto-incrementing unique ID for each report                       |
+|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who reported the issue)     |
+|                  | location       | VARCHAR(255)       | Location of the problem (e.g., address, area)                     |
+|                  | description    | TEXT               | Detailed description of the problem                               |
+|                  | created_at     | TIMESTAMP          | When the report was created                                       |
+|                  | status         | VARCHAR(50)        | Status of the report (e.g., 'open', 'closed', 'in progress')     |
+| images           | id             | INT (Primary Key)  | Auto-incrementing unique ID for each image                        |
+|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this image is attached to) |
+|                  | image_url      | VARCHAR(255)       | URL or path to the image file                                     |
+|                  | uploaded_at    | TIMESTAMP          | When the image was uploaded                                       |
+| comments         | id             | INT (Primary Key)  | Auto-incrementing unique ID for each comment                      |
+|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (user who made the comment)        |
+|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report this comment is attached to) |
+|                  | comment        | TEXT               | Content of the comment                                            |
+|                  | created_at     | TIMESTAMP          | When the comment was created                                      |
+| likes_dislikes   | id             | INT (Primary Key)  | Auto-incrementing unique ID                                        |
+|                  | user_id        | INT (Foreign Key)  | Reference to the `users` table (the user who liked/disliked)     |
+|                  | report_id      | INT (Foreign Key)  | Reference to the `reports` table (the report being liked or disliked) |
+|                  | type           | VARCHAR(10)        | Either 'like' or 'dislike'                                        |
+|                  | created_at     | TIMESTAMP          | When the like/dislike was made                                    |
+
 
 
 ## WireFlows:
