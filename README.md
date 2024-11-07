@@ -62,8 +62,6 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## Database:
 ### Tables:
 
-# Tables and Data Types for tilkynntu.is
-
 | Table Name       | Column Name    | Data Type          | Description                                                       |
 |------------------|----------------|--------------------|-------------------------------------------------------------------|
 | users            | id             | INT (Primary Key)  | Auto-incrementing unique ID for each user                         |
