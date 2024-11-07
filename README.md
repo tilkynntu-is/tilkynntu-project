@@ -59,6 +59,19 @@ _**Who:** A resident sees a large pothole on a busy road.
     - 📗 Django: A powerful python web framework for creating web apps. We picked Django because of it's many features and to learn something new.
     - 🐘 PostgreSQL Databases: Used for data storage, management, and retrieval.
 
+## Database:
+### Tables:
++ **users**
+  - id
+  - name
+  - reports
+  - score
++ **reports**
+  - id
+  - location
+  - img_link
+  - likes
+  - dislikes
 
 ## WireFlows:
 ![wireframe](https://github.com/user-attachments/assets/195fdf20-d5fb-4a4d-8d84-c1ba9d250ef8)
