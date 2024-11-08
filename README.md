@@ -62,46 +62,51 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## Database:
 ### Tables:
 
-| Table Name       | Column Name    | Description                                                       |
-|------------------|----------------|-------------------------------------------------------------------|
-| users            | id             | Auto-incrementing unique ID for each user                         |
-|                  | username       | Username for the user                                             |
-|                  | email          | Email address of the user                                         |
-|                  | password       | Hashed password for security                                      |
-|                  | first_name     | User's first name                                                 |
-|                  | last_name      | User's last name                                                  |
-|                  | date_joined    | The date the user joined                                          |
+**users**
+| Column Name    | Description                                                       |
+|----------------|-------------------------------------------------------------------|
+| id             | Auto-incrementing unique ID for each user                         |
+| username       | Username for the user                                             |
+| email          | Email address of the user                                         |
+| password       | Hashed password for security                                      |
+| first_name     | User's first name                                                 |
+| last_name      | User's last name                                                  |
+| date_joined    | The date the user joined                                          |
 
-| Table Name       | Column Name    | Description                                                       |
-|------------------|----------------|-------------------------------------------------------------------|
-| reports          | id             | Auto-incrementing unique ID for each report                       |
-|                  | user_id        | Reference to the `users` table (user who reported the issue)     |
-|                  | location       | Location of the problem (e.g., address, area)                     |
-|                  | description    | Detailed description of the problem                               |
-|                  | created_at     | When the report was created                                       |
+**reports**
+| Column Name    | Description                                                       |
+|----------------|-------------------------------------------------------------------|
+| id             | Auto-incrementing unique ID for each report                       |
+| user_id        | Reference to the `users` table (user who reported the issue)     |
+| location       | Location of the problem (e.g., address, area)                     |
+| description    | Detailed description of the problem                               |
+| created_at     | When the report was created                                       |
 
-| Table Name       | Column Name    | Description                                                       |
-|------------------|----------------|-------------------------------------------------------------------|
-| images           | id             | Auto-incrementing unique ID for each image                        |
-|                  | report_id      | Reference to the `reports` table (the report this image is attached to) |
-|                  | image_url      | URL or path to the image file                                     |
-|                  | uploaded_at    | When the image was uploaded                                       |
+**images**
+| Column Name    | Description                                                       |
+|----------------|-------------------------------------------------------------------|
+| id             | Auto-incrementing unique ID for each image                        |
+| report_id      | Reference to the `reports` table (the report this image is attached to) |
+| image_url      | URL or path to the image file                                     |
+| uploaded_at    | When the image was uploaded                                       |
 
-| Table Name       | Column Name    | Description                                                       |
-|------------------|----------------|-------------------------------------------------------------------|
-| comments         | id             | Auto-incrementing unique ID for each comment                      |
-|                  | user_id        | Reference to the `users` table (user who made the comment)        |
-|                  | report_id      | Reference to the `reports` table (the report this comment is attached to) |
-|                  | comment        | Content of the comment                                            |
-|                  | created_at     | When the comment was created                                      |
+**comments**
+| Column Name    | Description                                                       |
+|----------------|-------------------------------------------------------------------|
+| id             | Auto-incrementing unique ID for each comment                      |
+| user_id        | Reference to the `users` table (user who made the comment)        |
+| report_id      | Reference to the `reports` table (the report this comment is attached to) |
+| comment        | Content of the comment                                            |
+| created_at     | When the comment was created                                      |
 
-| Table Name       | Column Name    | Description                                                       |
-|------------------|----------------|-------------------------------------------------------------------|
-| likes_dislikes   | id             | Auto-incrementing unique ID                                        |
-|                  | user_id        | Reference to the `users` table (the user who liked/disliked)     |
-|                  | report_id      | Reference to the `reports` table (the report being liked or disliked) |
-|                  | type           | Either 'like' or 'dislike'                                        |
-|                  | created_at     | When the like/dislike was made                                    |
+**likes_dislikes**
+| Column Name    | Description                                                       |
+|----------------|-------------------------------------------------------------------|
+| id             | Auto-incrementing unique ID                                        |
+| user_id        | Reference to the `users` table (the user who liked/disliked)     |
+| report_id      | Reference to the `reports` table (the report being liked or disliked) |
+| type           | Either 'like' or 'dislike'                                        |
+| created_at     | When the like/dislike was made                                    |
 
 
 
