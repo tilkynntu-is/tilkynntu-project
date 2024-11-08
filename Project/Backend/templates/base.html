@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/output.css" rel="stylesheet">
+		<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+		<link href="{% static 'css/output.css' %}" rel="stylesheet">
 	</head>
-	<body class="m-0">
+	<body class="m-0 h-full flex flex-col min-h-screen dark:bg-gray-800 dark:text-teal-50">
 		{% include 'header.html' %}
-		<div id="content">
+		<div id="content" class="flex-grow h-full">
 			{% block content %}	
 
 			{% endblock %}
