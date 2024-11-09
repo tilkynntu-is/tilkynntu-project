@@ -147,9 +147,3 @@ tilkynntu.is-repo/
         └── index.html               
 ```
 
-## Repository Activity
-
-![GitHub Issues](https://img.shields.io/github/issues/tilkynntu-is/tilkynntu.is-repo)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/tilkynntu-is/tilkynntu.is-repo)
-![GitHub Stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu.is-repo)
-![GitHub Forks](https://img.shields.io/github/forks/tilkynntu-is/tilkynntu.is-repo)
