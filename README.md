@@ -147,11 +147,9 @@ tilkynntu.is-repo/
         └── index.html               
 ```
 
-### Repository Activity
+## Repository Activity
 
-![GitHub Issues](https://img.shields.io/github/issues/your-username/your-repo)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/your-username/your-repo)
-![GitHub Stars](https://img.shields.io/github/stars/your-username/your-repo)
-
-### Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=your-username/your-repo&type=Date)](https://star-history.com/#your-username/your-repo&Date)
+![GitHub Issues](https://img.shields.io/github/issues/tilkynntu-is/tilkynntu.is-repo)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/tilkynntu-is/tilkynntu.is-repo)
+![GitHub Stars](https://img.shields.io/github/stars/tilkynntu-is/tilkynntu.is-repo)
+![GitHub Forks](https://img.shields.io/github/forks/tilkynntu-is/tilkynntu.is-repo)
