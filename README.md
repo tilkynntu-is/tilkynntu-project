@@ -147,5 +147,3 @@ tilkynntu.is-repo/
         └── index.html               
 ```
 
-![GitHub Metrics](.github/images/metrics.svg)
-
