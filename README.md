@@ -154,4 +154,4 @@ tilkynntu.is-repo/
 ```
 
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Ingthor06&theme=transparent&hide_border=true)](https://git.io/streak-stats)
+
