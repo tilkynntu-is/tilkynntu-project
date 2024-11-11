@@ -15,7 +15,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          user: tilkynntu-is  # Replace with your GitHub username
+          user: Ingthor06  # Replace with your GitHub username
           template: classic
           config_timezone: Europe/Reykjavik
           plugin_contributors: yes
