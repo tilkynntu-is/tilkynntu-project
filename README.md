@@ -153,3 +153,6 @@ tilkynntu.is-repo/
         └── index.html               
 ```
 
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=tilkynntu.is-team&theme=transparent&hide_border=true)](https://git.io/streak-stats)
+
