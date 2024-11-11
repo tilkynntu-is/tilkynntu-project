@@ -147,6 +147,5 @@ tilkynntu.is-repo/
         └── index.html               
 ```
 
-#### Repository Activity and Star History
+![GitHub Metrics](.github/images/metrics.svg)
 
-![GitHub Metrics](./metrics/metrics.svg)
