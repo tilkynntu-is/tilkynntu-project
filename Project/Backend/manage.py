@@ -2,7 +2,6 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from loguru import logger
 
 
 def main():
@@ -11,7 +10,6 @@ def main():
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
-        logger.error("an error has occurred")
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
             "available on your PYTHONPATH environment variable? Did you "
