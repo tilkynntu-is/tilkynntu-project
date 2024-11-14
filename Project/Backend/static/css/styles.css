@@ -1,6 +1,6 @@
 .button-75 {
     align-items: center;
-    background-image: linear-gradient(135deg, #2063ff 40%, #468dff);
+    background-image: linear-gradient(135deg, #2063ff 40%, #6fa6ff);
     border: 0;
     border-radius: 5px;
     box-sizing: border-box;
@@ -54,10 +54,6 @@
     }
   }
 
-  .h1{
-    font-family: "Roboto", sans-serif;
-    font-size: 48px;
-  }
 
   .p-1 {
     display: flex;
