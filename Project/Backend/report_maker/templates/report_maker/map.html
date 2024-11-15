@@ -12,6 +12,9 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
             setPosition(position);
+        },
+        (error) => {
+                alert(error.message);
         });
     } else {
         alert("geolocation unavailable");
