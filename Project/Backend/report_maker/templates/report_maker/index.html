@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<main>
-	{% include "report_maker/map.html" %}
+<main class="grid grid-cols-2">
+	<div class="grid">
+		<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpitstone.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2Fnew-bus-shelter.jpg&f=1&nofb=1&ipt=750f3728475110127e982272a2bdb62a7d67a683a665cc9b33583856b1a59e20&ipo=images" alt="" class="w-80 rounded grid p-2">
+		{% include "report_maker/map.html" %}
+	</div>
+	<div class="grid"><h1>hello</h1></div>
+	<div class="grid"></div>
 </main>
 {% endblock %}
