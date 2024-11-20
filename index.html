@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>info page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  
+
+    <!-- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/locale/is.js"></script>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
+  
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!--  -->
+</head>
+<body class="min-h-screen flex flex-col bg-gray-800">
+  
+
+  <header class="bg-green-800 p-4 text-center text-xl font-bold text-blue-50">
+    Tilkynntu
+  </header>
+  
+
+  <main class="flex-grow grid grid-cols-1 lg:grid-cols-2">
+
+    <!-- vinstri meginn image og map -->
+    <div class="grid grid-rows-2">
+      <div class="flex">
+        <img class="w-full h-auto max-w-xs object-cover" src="https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962_3x4.jpg" alt="Image description">
+      </div>
+
+
+      <div class="relative w-full h-96">
+        <div id="map" class="map"></div>
+    </div>
+
+    </div>
+
+    <!-- hægri meginn 5 hlutir -->
+    <div class=" grid sm:grid-rows-5 text-white">
+      <div class="flex items-center justify-center p-1">information</div>
+      <div class="flex items-center justify-center p-1">tags</div>
+      <div class="flex items-center justify-center p-1">something</div>
+      <div class="flex items-center justify-center p-1">something</div>
+      <div class="flex items-center justify-center p-1">something</div>
+    </div>
+    
+  </main>
+
+  <footer class="bg-red-800 h-12 flex items-center justify-center">Stuff</footer>
+
+
+  <script defer src="script.js"></script>
+  <!-- bæta við noUiSlider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
