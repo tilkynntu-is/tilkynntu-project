@@ -84,7 +84,7 @@
   width: 80%;
   padding: 0.5em 0.5em 0.5em 0; /* Adjust padding to only give space on the left */
   border: none; /* Remove all borders */
-  border-bottom: 1px solid #ffffff; /* Add a bottom border */
+  border-bottom: 1px solid #8f90a6; /* Add a bottom border */
   background: transparent;
   transition: border-color 0.1s;
 }
