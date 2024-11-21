@@ -1,11 +1,15 @@
 <header class="bg-gray-900 text-white">
-    <div class="p-4 flex items-center">
-      <!-- Logo on the left -->
-      <img src="/static/images/tilkynntu-is-logo.png" alt="Tilkynntu Logo" class="h-14">
-
-
+  <div class="p-4 flex items-center justify-between">
+    <!-- Logo and Navigation on the left -->
+    <div class="flex items-center space-x-6">
+      <!-- Logo -->
+      <a href="/">
+        <img src="/static/images/tilkynntu-is-logo.png" alt="Tilkynntu Logo" class="h-14">
+      </a>
+      
+      
       <!-- Navigation -->
-      <nav class="ml-10 flex space-x-4">
+      <nav class="flex space-x-4">
         <button class="px-4 py-2 font-raleway text-white font-medium hover:scale-110 transition-transform">
           <a href="/">HEIM</a>
         </button>
@@ -20,5 +24,19 @@
         </button>
       </nav>
     </div>
-  </header>
-  
+
+    
+
+    <!-- Signup and Login Buttons on the far right -->
+    <div class="flex items-center space-x-4">
+      <a href="/login" class="md:hidden">
+        <img src="https://static.thenounproject.com/png/7016046-200.png" alt="Login Icon" class="h-8 w-8 invert">
+      </a>
+      <div class="hidden md:flex space-x-4">
+        <a href="/login" class="px-4 py-2 font-medium hover:scale-110 transition-transform">Login</a>
+        <a href="/signup" class="px-4 py-2 w-40 bg-blue-500 hover:bg-blue-700 font-medium rounded-full transition flex items-center justify-center">Signup</a>
+      </div>
+    </div>
+    
+  </div>
+</header>
