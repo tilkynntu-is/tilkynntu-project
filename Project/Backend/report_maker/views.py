@@ -15,3 +15,15 @@ def index(request: HttpRequest) -> HttpResponse:
     }
 
     return HttpResponse(template.render(context, request))
+
+
+def htmx_accept_popup(request: HttpRequest) -> HttpResponse:
+    template = loader.get_template("report_maker/accept_popup.html")
+    context = {
+        "popup_title": "accept",
+        "popup_text": "is this right?",
+        "button_1_text": "Decline",
+        "button_2_text": "Accept",
+    }
+
+    return HttpResponse(template.render(context, request))

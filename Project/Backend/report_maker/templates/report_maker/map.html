@@ -7,5 +7,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 20,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+map.on('click', onMapClick);
+
+function onMapClick(e) {
+    var marker = L.marker(e.latlng).addTo(map);
+    htmx.ajax('GET', '/tilkynna/htmx_accept_popup', {target:'#map-container', swap:'beforeend'});
+}
+
+function declineButtonClicked() {
+    document.getElementById("acceptPopup").remove();
+    marker.remove();
+}
 </script>
 </div>
