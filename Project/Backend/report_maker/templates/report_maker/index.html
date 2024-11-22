@@ -2,10 +2,36 @@
 {% block content %}
 <main class="grid grid-cols-2">
 	<div class="grid">
-		<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpitstone.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2Fnew-bus-shelter.jpg&f=1&nofb=1&ipt=750f3728475110127e982272a2bdb62a7d67a683a665cc9b33583856b1a59e20&ipo=images" alt="" class="w-80 rounded grid p-2">
+		<div id="img-container" class="w-80 rounded grid p-2 m-0">
+			<img id="img-tag" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpitstone.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2Fnew-bus-shelter.jpg&f=1&nofb=1&ipt=750f3728475110127e982272a2bdb62a7d67a683a665cc9b33583856b1a59e20&ipo=images" alt="" class="w-full rounded">
+			<input id="image-input" type="file" accepts="image/*" name="image" >
+		</div>
 		{% include "report_maker/map.html" %}
 	</div>
-	<div class="grid"><h1>hello</h1></div>
-	<div class="grid"></div>
+	<div class="grid p-2 w-full">
+		<input type="text" id="title-input" name="title" value="" class="w-1/2 h-6 border border-black rounded text-black">
+		<input type="text" id="text-input" name="description" value="" class="w-full text-black">
+	</div>
+	<script>
+		var img_input = document.getElementById("image-input");
+		var title_input = document.getElementById("title-input");
+		var text_input = document.getElementById("text-input");
+
+		var img_tag = document.getElementById("img-tag");
+
+		var selected_img;
+		var title;
+		var description;
+		img_input.onchange = () => {
+			selected_img = img_input.files[0];
+			img_tag.src = URL.createObjectURL(selected_img);
+		}
+		title_input.onchange = () => {
+			title = title_input.value;
+		}
+		text_input.onchange = () => {
+			description = text_input.value;
+		}
+	</script>
 </main>
 {% endblock %}
