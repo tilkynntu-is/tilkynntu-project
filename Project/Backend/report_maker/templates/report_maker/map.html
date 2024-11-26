@@ -10,19 +10,23 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 map.on('click', onMapClick);
 
 var marker;
+var new_marker;
 
 function onMapClick(e) {
-    marker = L.marker(e.latlng).addTo(map);
+    new_marker = L.marker(e.latlng).addTo(map);
     htmx.ajax('GET', '/tilkynna/htmx_accept_popup', {target:'#map-container', swap:'beforeend'});
 }
 
 function declineButtonClicked() {
     document.getElementById("acceptPopup").remove();
-    marker.remove();
+    new_marker.remove();
 }
 function acceptButtonClicked() {
-	
 	document.getElementById("acceptPopup").remove();
+	if (marker) {
+	    marker.remove();
+	}
+	marker = new_marker;
 }
 </script>
 </div>

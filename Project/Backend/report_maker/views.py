@@ -27,3 +27,11 @@ def htmx_accept_popup(request: HttpRequest) -> HttpResponse:
     }
 
     return HttpResponse(template.render(context, request))
+
+
+def htmx_get_tag(request: HttpRequest) -> HttpResponse:
+    template = loader.get_template("report_maker/tag.html")
+    context = {
+        "tag_text": request.GET.get("tag_text"),
+    }
+    return HttpResponse(template.render(context, request))
