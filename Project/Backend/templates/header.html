@@ -3,46 +3,51 @@
     <!-- Logo and Navigation on the left -->
     <div class="flex items-center space-x-6">
       <!-- Logo -->
-      <a href="/">
-        <img src="/static/images/tilkynntu-is-logo.png" alt="Tilkynntu Logo" class="h-14">
+      <a href="/" class="flex-shrink-0">
+        <img src="/static/images/tilkynntu-is-logo.png" alt="Tilkynntu Logo" class="h-12 w-auto">
       </a>
-      
-      
-      
-      <!-- Navigation -->
-      <nav class="flex space-x-4">
-        <button class="px-4 py-2 font-raleway text-white font-medium hover:scale-110 transition-transform">
-          <a href="/">HEIM</a>
-        </button>
-        <button class="px-4 py-2 font-raleway text-white font-medium hover:scale-110 transition-transform">
-          <a href="/about">UM OKKUR</a>
-        </button>
-        <button class="px-4 py-2 font-raleway text-white font-medium hover:scale-110 transition-transform">
-          <a href="/help">ÞJÓNUSTA</a>
-        </button>
-        <button class="px-4 py-2 font-raleway text-white font-medium hover:scale-110 transition-transform">
-          <a href="/contact">HAFA SAMBAND</a>
-        </button>
+  
+      <!-- Hamburger Menu Toggle (Small Screens) -->
+      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+      <label for="menu-toggle" class="cursor-pointer md:hidden block">
+        <svg class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </label>
+
+  
+      <!-- Navigation Menu -->
+      <nav class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:relative top-20 md:top-auto left--4 right-0 mx-auto w-full md:w-auto bg-gray-900 md:bg-transparent space-y-4 md:space-y-0 md:space-x-4 items-center fade-down  ">
+        <a href="/" class="block px-4 py-2 font-raleway font-medium hover:scale-110 transition-transform">HEIM</a>
+        <a href="/about" class="block px-4 py-2 font-raleway font-medium hover:scale-110 transition-transform">UM OKKUR</a>
+        <a href="/help" class="block px-4 py-2 font-raleway font-medium hover:scale-110 transition-transform">ÞJÓNUSTA</a>
+        <a href="/contact" class="block px-4 py-2 font-raleway font-medium hover:scale-110 transition-transform">HAFA SAMBAND</a>
       </nav>
     </div>
 
-    <form action="" class="search-bar">
-      <input type="search" name="search" pattern=".*\S.*" required placeholder="search...">
-      <button class="search-btn" type="submit">
-        <span class="span-search">Leita</span>
+    <!-- Search Button aligned to the right -->
+    <form action="" class="ml-auto mr-5">
+      <button class="search-btn ml-2 px-6 py-3 bg-[#2b2b2b] hover:bg-[#2762f3] rounded-[1.5em] text-white font-medium transition">
+        <span class="font-raleway span-search">Leita</span>
       </button>
     </form>
-
-    <!-- Signup and Login Buttons on the far right -->
-    <div class="flex items-center space-x-4">
-      <a href="/login" class="md:hidden">
-        <img src="https://static.thenounproject.com/png/7016046-200.png" alt="Login Icon" class="h-8 w-8 invert">
-      </a>
-      <div class="hidden md:flex space-x-4">
-        <a href="/login" class="px-4 py-2 font-medium hover:scale-110 transition-transform">Login</a>
-        <a href="/signup" class="px-4 py-2 w-40 bg-blue-500 hover:bg-blue-700 font-medium rounded-full transition flex items-center justify-center">Signup</a>
-      </div>
-    </div>
     
+
+      <!-- Signup and Login Buttons on the far right -->
+      <div class="flex-shrink-0 space-x-4 mr-2">
+        <!-- Icon for smaller screens -->
+        <a href="/login" class="block lg:hidden font-bold">
+          <img src="/static/images/people.png" alt="Login Icon">
+        </a>
+        
+        
+
+        <!-- Login and Signup buttons for larger screens -->
+        <div class="hidden lg:flex space-x-4">
+          <a href="/login" class="px-4 py-2 font-medium hover:scale-110 transition-transform">Login</a>
+          <a href="/signup" class="px-4 py-2 w-40 bg-blue-500 hover:bg-blue-700 font-medium rounded-full transition flex items-center justify-center">Signup</a>
+        </div>
+      </div>
+
   </div>
 </header>
