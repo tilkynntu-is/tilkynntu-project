@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'], // corrected typo here
+      },
+      textTransform: {
+        'uppercase-raleway': 'uppercase',
       },
       keyframes: {
         fadeUp: {
