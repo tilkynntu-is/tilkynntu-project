@@ -10,7 +10,7 @@ let coasterMap;
 
 function showMap(lat, lng) {
     const mapElement = document.getElementById('map');
-    
+
     if (coasterMap) {
         coasterMap.remove();
     }
