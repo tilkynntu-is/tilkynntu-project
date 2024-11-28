@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,6 @@
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  
-
 </head>
 <body class="min-h-screen flex flex-col bg-gray-800">
   
@@ -30,9 +29,9 @@
       <div class="flex justify-center items-center bg-gray-700">
         <img class="w-full h-auto max-w-xs object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfhFt7YBH_PZlupbJg3zNe0lrfs8fkSqNIJQ&s" alt="Image description">
       </div>
-      <div class="relative w-full h-64 lg:h-96">
-        <div id="map" class="w-full h-full"></div>
-      </div>
+	  <div class="relative w-full h-64 lg:h-96">
+		<div id="map" class="w-full h-full"></div>
+	</div>
     </div>
     <!-- Hægri grid -->
     <div class="grid sm:grid-rows-5 text-white">
@@ -44,17 +43,13 @@
     </div>
   </main>
 
-
-
-
   <footer class="bg-red-800 h-12 flex items-center justify-between px-4">
     <div class="text-white">Section 1</div>
     <div class="text-white">Section 2</div>
     <div class="text-white">Section 3</div>
     <div class="text-white">Section 4</div>
-</footer>
+  </footer>
 
-
-  <script defer src="script.js"></script>
+  <script defer src="{% static 'js/Script.js' %}"></script>
 </body>
 </html>
