@@ -18,38 +18,37 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body class="min-h-screen flex flex-col bg-gray-800">
-  
-  <header class="bg-green-800 p-4 text-center text-xl font-bold text-blue-50">
-    Tilkynntu
-  </header>
-  
-  <main class="flex-grow grid grid-cols-1 lg:grid-cols-2">
+	<header class="bg-green-800 p-4 text-center text-xl font-bold text-blue-50">
+		Tilkynntu
+	  </header>
+	  <main class="flex-grow grid grid-cols-1 lg:grid-cols-2">
     <!-- vinstri grid Image og Map -->
-    <div class="grid grid-rows-2">
-      <div class="flex justify-center items-center bg-gray-700">
-        <img class="w-full h-auto max-w-xs object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfhFt7YBH_PZlupbJg3zNe0lrfs8fkSqNIJQ&s" alt="Image description">
-      </div>
-	  <div class="relative w-full h-64 lg:h-96">
-		<div id="map" class="w-full h-full"></div>
-	</div>
-    </div>
+		<div class="grid grid-rows-2">
+		  <div class="flex justify-center items-center bg-gray-700">
+			<img class="w-full h-auto max-w-xs object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfhFt7YBH_PZlupbJg3zNe0lrfs8fkSqNIJQ&s" alt="Image description">
+		  </div>
+		  <div class="relative w-full h-64 lg:h-96">
+			<div id="map" class="w-full h-full"></div>
+		  </div>
+		</div>
     <!-- Hægri grid -->
-    <div class="grid sm:grid-rows-5 text-white">
-      <div class="flex items-center justify-center p-1">information</div>
-      <div class="flex items-center justify-center p-1">tags</div>
-      <div class="flex items-center justify-center p-1">something</div>
-      <div class="flex items-center justify-center p-1">something</div>
-      <div class="flex items-center justify-center p-1">something</div>
-    </div>
-  </main>
-
-  <footer class="bg-red-800 h-12 flex items-center justify-between px-4">
-    <div class="text-white">Section 1</div>
-    <div class="text-white">Section 2</div>
-    <div class="text-white">Section 3</div>
-    <div class="text-white">Section 4</div>
-  </footer>
-
-  <script defer src="{% static 'js/Script.js' %}"></script>
-</body>
+		<div class="grid sm:grid-rows-5 text-white">
+		  <div class="flex items-center justify-center p-1">information</div>
+		  <div class="flex items-center justify-center p-1">tags</div>
+		  <div class="flex items-center justify-center p-1">something</div>
+		  <div class="flex items-center justify-center p-1">something</div>
+		  <div class="flex items-center justify-center p-1">something</div>
+		</div>
+	  </main>
+	
+	  <footer class="bg-red-800 h-12 flex items-center justify-between px-4">
+		<div class="text-white">Section 1</div>
+		<div class="text-white">Section 2</div>
+		<div class="text-white">Section 3</div>
+		<div class="text-white">Section 4</div>
+	  </footer>
+		
+		<!-- Link to the JavaScript file -->
+		<script src="{% static 'js/scripts.js' %}"></script>
+	</body>
 </html>

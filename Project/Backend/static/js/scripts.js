@@ -1,13 +1,15 @@
+// testa eva js er connected
+console.log("JavaScript file is successfully connected!");
+
+
 // tryggvi 2024
 const leafletMap = L;
 let coasterMap;
 
+
+
 function showMap(lat, lng) {
     const mapElement = document.getElementById('map');
-
-    // Ensure the map container has dimensions
-    mapElement.style.height = "100%"; // Ensure the container has height
-    mapElement.style.width = "100%";  // Ensure the container has width
     
     if (coasterMap) {
         coasterMap.remove();
