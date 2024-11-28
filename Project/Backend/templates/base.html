@@ -11,7 +11,8 @@
 		<link href="{% static 'css/styles.css' %}" rel="stylesheet">
 		<link href="{% static 'css/output.css' %}" rel="stylesheet">
 	</head>
-	<body class="m-0 h-full flex flex-col min-h-screen dark:bg-gray-800 dark:text-teal-50">
+	<body class="m-0 h-full flex flex-col min-h-screen bg-gradient-to-r from-[#212b3b] to-[#303e54] dark:bg-gray-800 dark:text-teal-50">
+
 		{% include 'header.html' %}
 		<div id="content" class="flex-grow h-full">
 			{% block content %}	
