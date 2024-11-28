@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <main class="">
-	<div class="grid grid-cols-2">
+	<div class="grid md:grid-cols-2">
+	<div class=" p-2 w-full">
+		<label for="title-input"><h3>Title</h3></label>
+		<input type="text" id="title-input" name="title" value="" class="w-1/2 h-6 border border-purple-700 rounded text-black">
+		<input type="text" id="text-input" name="description" value="" class="w-full text-black h-20 border-purple-700 rounded">
+		{% include "report_maker/tag_adder.html" %}
+	</div>
 	<div class="grid">
 		<div id="img-container" class="w-80 rounded grid p-2 m-0">
 			<img id="img-tag" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpitstone.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2Fnew-bus-shelter.jpg&f=1&nofb=1&ipt=750f3728475110127e982272a2bdb62a7d67a683a665cc9b33583856b1a59e20&ipo=images" alt="" class="w-full rounded">
 			<input id="image-input" type="file" accepts="image/*" name="image" >
 		</div>
 		{% include "report_maker/map.html" %}
-	</div>
-	<div class="grid p-2 w-full">
-		<input type="text" id="title-input" name="title" value="" class="w-1/2 h-6 border border-purple-700 rounded text-black">
-		<input type="text" id="text-input" name="description" value="" class="w-full text-black h-20 border-purple-700 rounded">
-		{% include "report_maker/tag_adder.html" %}
 	</div>
 	</div>
 	<button class="left-1/2 relative bg-blue-400 p-2 rounded -translate-x-1/2 mb-2 bold" hx-on:click="tilkynna_submit()"><h3>Submit</h3></button>
@@ -21,12 +22,16 @@
 		var img_input = document.getElementById("image-input");
 		var title_input = document.getElementById("title-input");
 		var text_input = document.getElementById("text-input");
+		var tag_adder = document.getElementById("tag-adder");
+		var tag_input = document.getElementById("tag-input");
 
 		var img_tag = document.getElementById("img-tag");
 
 		var selected_img;
 		var title;
 		var description;
+		var tag_list = new Set();
+
 		img_input.onchange = () => {
 			selected_img = img_input.files[0];
 			img_tag.src = URL.createObjectURL(selected_img);
@@ -39,6 +44,15 @@
 		}
 		function tilkynna_submit() {
 			console.log(title);
+		}
+		function add_tag(tag_text) {
+			tag_list.add(tag_text);
+			tag_input.value = "";
+			console.log(tag_list);
+		}
+		function delete_tag(tag_text) {
+			document.getElementById("tag-"+tag_text).remove();
+			tag_list.delete(tag_text);
 		}
 	</script>
 </main>
