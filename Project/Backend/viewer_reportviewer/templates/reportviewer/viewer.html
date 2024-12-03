@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Info Page</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Day.js and Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/locale/is.js"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-800">
+
+{% include 'header.html' %}
+
+  <main class="flex-grow grid grid-cols-1 lg:grid-cols-2">
+    <!-- vinstri grid Image og Map -->
+<div class="grid grid-rows-2">
+  <div class="flex justify-center items-center">
+<img class="w-full h-auto max-w-xs object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfhFt7YBH_PZlupbJg3zNe0lrfs8fkSqNIJQ&s" alt="Image description">
+  </div>
+  <div class="relative w-full h-64 lg:h-96">
+<div id="map" class="w-full h-full"></div>
+  </div>
+</div>
+    <!-- HÃ¦gri grid -->
+<div class="grid sm:grid-rows-5 text-white">
+  <div class="flex items-center justify-center p-1">information</div>
+  <div class="flex items-center justify-center p-1">
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">tag1</span>
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">tag2</span>
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">tag3</span>
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">tag4</span>
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">tag5</span>
+  </div>
+  <div class="flex items-center justify-center p-1">something</div>
+  <div class="flex items-center justify-center p-1">something</div>
+  <div class="flex items-center justify-center p-1">something</div>
+</div>
+
+
+  </main>
+
+  {% include 'footer.html' %}
+
+<!-- Link to the JavaScript file -->
+<script src="{% static 'js/viewerScripts.js' %}"></script>
+</body>
+</html>

@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("home.urls")),
+        path("viewer/", include("viewer_reportviewer.urls")),  # Adds viewer_reportviewer app
+
 ]
