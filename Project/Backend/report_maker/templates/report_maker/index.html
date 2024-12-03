@@ -21,6 +21,7 @@
 	<button class="left-1/2 relative bg-blue-400 p-2 rounded-lg -translate-x-1/2 mb-2 font-bold text-xl text-gray-900" hx-on:click="tilkynna_submit()"><h3>Submit</h3></button>
 
 	<script>
+
 		var img_input = document.getElementById("image-input");
 		var title_input = document.getElementById("title-input");
 		var text_input = document.getElementById("text-input");
@@ -56,6 +57,43 @@
 			document.getElementById("tag-"+tag_text).remove();
 			tag_list.delete(tag_text);
 		}
+
+		async function tilkynna_submit() {
+			const csrftoken = getCookie('csrftoken');
+			const form_data = new FormData();
+			form_data.append('image', selected_img);
+			const json_data = {
+				title: title_input.value,
+				description: text_input.value,
+				tag_list: Array.from(tag_list),
+				location: marker.getLatLng(),
+			};
+			form_data.append('json', JSON.stringify(json_data));
+			fetch('/tilkynna/upload', {
+				method: 'POST',
+				body: form_data,
+				headers: {'X-CSRFToken': csrftoken},
+			})
+			.then((response) => console.log(response))
+			.catch((error) => console.log(error));
+		}
+
+		function getCookie(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+				const cookies = document.cookie.split(';');
+				for (let i = 0; i < cookies.length; i++) {
+					const cookie = cookies[i].trim();
+					// Does this cookie string begin with the name we want?
+					if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+
 	</script>
 </main>
 {% endblock %}

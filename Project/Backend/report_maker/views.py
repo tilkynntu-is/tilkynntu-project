@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.http.response import HttpResponseForbidden
 from django.shortcuts import render
 from django.http.request import HttpRequest
 from django.template import loader
@@ -35,3 +36,11 @@ def htmx_get_tag(request: HttpRequest) -> HttpResponse:
         "tag_text": request.GET.get("tag_text"),
     }
     return HttpResponse(template.render(context, request))
+
+
+def upload(request: HttpRequest) -> HttpResponse:
+    print(request.POST.get("json"))
+    if request.method == "POST":
+        return HttpResponse('OK')
+    else:
+        return HttpResponseForbidden()
