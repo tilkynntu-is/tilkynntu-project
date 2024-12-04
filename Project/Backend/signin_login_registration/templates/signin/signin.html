@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen">
+    <div id="form-container" class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-center text-2xl font-bold mb-6">Skrá inn</h1>
+
+
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label for="login-username" class="block text-sm font-medium">Fyrsta nafn</label>
+                <input id="login-username" type="text" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" placeholder="Enter First Name" required>
+            </div>
+            <div>
+                <label for="login-password" class="block text-sm font-medium">Leyniorð                </label>
+                <input id="login-password" type="password" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded-md">Skrá in</button>
+        </form>
+
+
+        <form id="signup-form" class="space-y-4 hidden">
+            <div>
+                <label for="signup-firstname" class="block text-sm font-medium">Fyrsta nafn</label>
+                <input id="signup-firstname" type="text" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" placeholder="Enter First Name" required>
+            </div>
+            <div>
+                <label for="signup-lastname" class="block text-sm font-medium">síðasta nafn</label>
+                <input id="signup-lastname" type="text" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" placeholder="Enter Last Name" required>
+            </div>
+            <div>
+                <label for="signup-birthday" class="block text-sm font-medium">fæðingardagur</label>
+                <input id="signup-birthday" type="date" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" required>
+            </div>
+            <div>
+                <label for="signup-password" class="block text-sm font-medium">Leyniorð</label>
+                <input id="signup-password" type="password" class="w-full px-3 py-2 rounded-md bg-gray-700 text-white" placeholder="Create Password" required>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded-md">Skrá in</button>
+        </form>
+
+        <p class="text-center mt-4">
+            <a id="toggle-form" class="text-blue-400 hover:underline cursor-pointer">Ekki með aðgang? Gerðu eitt hér</a>
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
+    <script src="{% static 'js/signloginscripts.js' %}"></script>
+</body>
+</html>
+
+

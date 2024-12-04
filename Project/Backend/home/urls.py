@@ -2,6 +2,7 @@ from django.urls import URLPattern, path
 
 from . import views
 
-urlpatterns: list[URLPattern] = [
-    path("", views.index, name="index")
+urlpatterns = [
+    path("", views.index, name="index"),  # Route for the home app index view
 ]
+
