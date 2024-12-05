@@ -1,18 +1,16 @@
 // testa eva js er connected
 console.log("JavaScript file is successfully connected!");
 
-    // On page load or when changing themes, best to add inline in head to avoid FOUC
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+} else {
+    document.documentElement.classList.remove('dark');
+}
 
-
+// tryggvi 2024
 const leafletMap = L;
 let coasterMap;
-
-
 
 function showMap(lat, lng) {
     const mapElement = document.getElementById('map');
@@ -23,7 +21,7 @@ function showMap(lat, lng) {
 
     coasterMap = leafletMap.map(mapElement).setView([lat, lng], 13);
 
-    leafletMap.tileLayer('https://{s}.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png', {
+    leafletMap.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
     }).addTo(coasterMap);
 
@@ -32,6 +30,34 @@ function showMap(lat, lng) {
         .openPopup();
 }
 
+// Like button functionality
 document.addEventListener('DOMContentLoaded', function () {
     showMap(40.1489, -74.4408);
+
+    const likeButton = document.createElement('button');
+    likeButton.textContent = "Like";
+    likeButton.className = "bg-blue-500 text-white px-4 py-2 rounded";
+    likeButton.style.marginTop = "20px";
+
+    const likeContainer = document.createElement('div');
+    likeContainer.className = "flex justify-center";
+    likeContainer.appendChild(likeButton);
+    document.body.appendChild(likeContainer);
+
+    const hasLiked = localStorage.getItem('hasLiked') === 'true';
+
+    if (hasLiked) {
+        likeButton.textContent = "Liked!";
+        likeButton.disabled = true;
+        likeButton.classList.add('opacity-50', 'cursor-not-allowed');
+    }
+
+    likeButton.addEventListener('click', function () {
+        if (!hasLiked) {
+            localStorage.setItem('hasLiked', 'true');
+            likeButton.textContent = "Liked!";
+            likeButton.disabled = true;
+            likeButton.classList.add('opacity-50', 'cursor-not-allowed');
+        }
+    });
 });
