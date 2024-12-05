@@ -2,7 +2,24 @@
 module.exports = {
   content: ["./Project/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quicksand: ['Quicksand', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'], // corrected typo here
+      },
+      textTransform: {
+        'uppercase-raleway': 'uppercase',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(0px)' },
+          '100%': { opacity: '1', transform: 'translateY(-20px)' },
+        },
+      },
+      animation: {
+        fadeUp: 'fadeUp 0.5s ease-out forwards',
+      },
+    },
   },
   plugins: [],
-}
+};

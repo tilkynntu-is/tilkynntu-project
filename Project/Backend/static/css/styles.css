@@ -54,15 +54,32 @@
   }
 }
 
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* cant be named p-1 because thats a tailwind class */
-.p-i {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  /* Full viewport height */
-  transform: translateY(100%);
-  /* Adjust this value to move it down further if needed */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fade-down 0.1s ease-out forwards;
+}
+
+.fade-up {
+  animation: fade-up 0.1s ease-out forwards;
 }
