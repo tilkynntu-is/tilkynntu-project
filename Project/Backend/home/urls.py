@@ -1,6 +1,5 @@
-from django.urls import path, include  # Import 'path' and 'include'
-from . import views
+from django.urls import path, include  
 
 urlpatterns = [
-    path("", views.index, name="index"),  # Route for the home app index view
+    path("", views.index, name="index"),
 ]
