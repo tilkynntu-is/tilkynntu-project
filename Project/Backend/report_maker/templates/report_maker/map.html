@@ -1,0 +1,32 @@
+<div id="map-container" class="m-0 p-2">
+<div id="map" class="h-96 w-full rounded"></div>
+<button onclick="getLocation()" class="bg-sky-700 rounded p-1" >get location</button>
+<script>
+var map = L.map('map').setView([{{x_coord}}, {{y_coord}}], {{zoom}});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+map.on('click', onMapClick);
+
+var marker;
+var new_marker;
+
+function onMapClick(e) {
+    new_marker = L.marker(e.latlng).addTo(map);
+    htmx.ajax('GET', '/tilkynna/htmx_accept_popup', {target:'#map-container', swap:'beforeend'});
+}
+
+function declineButtonClicked() {
+    document.getElementById("acceptPopup").remove();
+    new_marker.remove();
+}
+function acceptButtonClicked() {
+	document.getElementById("acceptPopup").remove();
+	if (marker) {
+	    marker.remove();
+	}
+	marker = new_marker;
+}
+</script>
+</div>

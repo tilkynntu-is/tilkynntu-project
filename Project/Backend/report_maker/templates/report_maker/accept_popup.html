@@ -1,0 +1,8 @@
+<div id='acceptPopup' class="grid-rows-3 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 bg-sky-300 text-gray-800 rounded border-gray-800 border" style="z-index: 1000">
+	<h3 class="grid text-center font-bold">{{popup_title}}</h3>
+	<p class="grid text-center">{{popup_text}}</p>
+	<div class="grid">
+		<button id='declineButton' class="bg-red-500" hx-on:click='declineButtonClicked()'>{{button_1_text}}</button>
+		<button id='acceptButton' class="bg-emerald-500 rounded-b" hx-on:click='acceptButtonClicked()'>{{button_2_text}}</button>
+	</div>
+</div>
