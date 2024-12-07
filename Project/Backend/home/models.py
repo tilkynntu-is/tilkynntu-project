@@ -50,7 +50,7 @@ class Report(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags}, image: {self.image}"
+        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags.get()}, image: {self.image}"
 
 
 class Rating(models.Model):
@@ -72,3 +72,6 @@ class Comment(models.Model):
     report = models.ForeignKey(Report, on_delete=models.DO_NOTHING, null=True)
     time_posted = models.DateTimeField("time posted", default=datetime.now)
     text = models.CharField(max_length=256)
+
+    def __str__(self) -> str:
+        return f"id: {self.id}, user: {self.user}, report: {self.report}, time_posted: {self.time_posted}, text: {self.text}"
