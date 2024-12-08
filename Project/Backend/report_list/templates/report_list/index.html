@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+		{% for report_id in report_list %}
+				<div hx-get="/tilkynningar/htmx-report/{{report_id}}" hx-trigger="revealed"></div>
+		{% endfor %}
+</main>
+{% endblock %}

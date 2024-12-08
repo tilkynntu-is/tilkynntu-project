@@ -1,0 +1,9 @@
+<div id="report-{{id}}">
+	<div hx-get="/tilkynningar/htmx-image/{{image_id}}" hx-trigger="load">img</div>
+	<h2 class="font-bold">{{title}}</h2>
+	<p class="">{{description}}</p>
+	{% for tag in tags %}
+	<span>{{tag.text}}</span>
+	{% endfor %}
+	<hr/>
+</div>
