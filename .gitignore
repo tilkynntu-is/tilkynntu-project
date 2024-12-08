@@ -1,4 +1,5 @@
 output.css
+Project/Backend/media/uploads/*
 
 node_modules
 package-lock.json
