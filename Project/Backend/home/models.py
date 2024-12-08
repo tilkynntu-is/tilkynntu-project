@@ -1,7 +1,9 @@
 import uuid
 from datetime import datetime
 from django.db import models
-from django.contrib.auth.models import User;
+from django.contrib.auth.models import User
+from django.core.files.images import ImageFile
+from image_endpoint.models import ImageContainer
 
 
 class Tag(models.Model):
@@ -23,6 +25,11 @@ class Image(models.Model):
 
     def __str__(self) -> str:
         return f"id: {self.id}, time_uploaded: {self.time_uploaded}, url: {self.url}, alt_text: {self.alt_text}"
+
+    def __init__(self, alt_text: str, image: ImageFile):
+        image_container = ImageContainer.objects.create(image = image)
+        self.url = f"images/uuid/{image_container.id}"
+        self.alt_text = alt_text
 
 
 class Report(models.Model):
