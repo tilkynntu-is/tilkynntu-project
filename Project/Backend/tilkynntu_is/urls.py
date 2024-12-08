@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("home.urls")),
     path("tilkynna", include("report_maker.urls")),
+    path("images/", include("image_endpoint.urls"))
 ]
