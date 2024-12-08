@@ -28,7 +28,7 @@ class Image(models.Model):
 
     def __init__(self, alt_text: str, image: ImageFile):
         image_container = ImageContainer.objects.create(image = image)
-        self.url = f"/images/uuid/{image_container.id}"
+        self.url = f"images/uuid/{image_container.id}"
         self.alt_text = alt_text
 
 
