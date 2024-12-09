@@ -48,9 +48,15 @@ def login_view(request):
 # Success View
 @login_required
 def success_view(request):
-    
+    # Fetch the user's reports
     user_reports = Report.objects.filter(user_id=request.user)
-    return render(request, 'signin/success.html', {'reports': user_reports})
+
+    # Pass user data (username, email) along with reports to the template
+    context = {
+        'user': request.user,  # Pass the user object to access username and email
+        'reports': user_reports,
+    }
+    return render(request, 'signin/success.html', context)
 
 # Logout View
 def logout_view(request):
