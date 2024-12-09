@@ -20,15 +20,15 @@ class Image(models.Model):
         primary_key=True, default=uuid.uuid4, editable=False)
     time_uploaded = models.DateTimeField(
         "time uploaded", default=datetime.now)
-    url = models.URLField(max_length=1024)
+    path = models.CharField(max_length=1024)
     alt_text = models.TextField()
 
     def __str__(self) -> str:
-        return f"id: {self.id}, time_uploaded: {self.time_uploaded}, url: {self.url}, alt_text: {self.alt_text}"
+        return f"id: {self.id}, time_uploaded: {self.time_uploaded}, url: {self.path}, alt_text: {self.alt_text}"
 
-    def __init__(self, alt_text: str, image: ImageFile):
+    def create_image(self, image: ImageFile, alt_text: str):
         image_container = ImageContainer.objects.create(image = image)
-        self.url = f"images/uuid/{image_container.id}"
+        self.path = f"images/uuid/{image_container.id}"
         self.alt_text = alt_text
 
 
@@ -46,7 +46,7 @@ class Report(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags.get()}, image: {self.image}"
+        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags.all()}, image: {self.image}"
 
 
 class Rating(models.Model):
