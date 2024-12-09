@@ -46,7 +46,7 @@ class Report(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags.get()}, image: {self.image}"
+        return f"id; {self.id}, time_published: {self.time_published}, location: ({self.loc_lat}, {self.loc_lng}), title: {self.title}, description: {self.description}, tags: {self.tags.all()}, image: {self.image}"
 
 
 class Rating(models.Model):

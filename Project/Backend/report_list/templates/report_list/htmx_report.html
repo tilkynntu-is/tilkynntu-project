@@ -1,9 +1,19 @@
-<div id="report-{{id}}">
-	<div hx-get="/tilkynningar/htmx-image/{{image_id}}" hx-trigger="load">img</div>
-	<h2 class="font-bold">{{title}}</h2>
-	<p class="">{{description}}</p>
-	{% for tag in tags %}
-	<span>{{tag.text}}</span>
-	{% endfor %}
+<div id="report-{{id}}" class="">
+	<div class="grid-cols-2 grid">
+		<div class="h-full">
+			<div hx-get="/tilkynningar/htmx-image/{{image_id}}" hx-trigger="load" hx-target="this" hx-swap="outerHTML">img</div>
+		</div>
+		<div class="">
+			<h1 class="font-medium text-3xl m-2">{{title}}</h1>
+			<p class="m-2">{{description}}</p>
+			<ul class="m-1">
+				{% for tag in tags %}
+				<li class="inline border-gray-800 bg-cyan-800 rounded m-1 p-1">
+					<span>{{tag.text}}</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 	<hr/>
 </div>
