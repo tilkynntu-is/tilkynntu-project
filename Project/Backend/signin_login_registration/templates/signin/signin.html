@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-blue-700 flex flex-col items-center justify-center min-h-screen">
+    <div id="form-container" class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-center text-2xl font-bold mb-6">
+            {% if signup %}Sign Up{% else %}Sign In{% endif %}
+        </h1>
+
+        <form method="post" id="auth-form" class="space-y-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div id="username-display" class="text-center text-green-400 font-bold hidden"></div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded-md">
+                {% if signup %}Sign Up{% else %}Sign In{% endif %}
+            </button>
+        </form>
+
+        <p class="text-center mt-4">
+            {% if signup %}
+                Already have an account? <a href="{% url 'login' %}" class="text-blue-400 hover:underline">Sign In</a>
+            {% else %}
+                Don't have an account? <a href="{% url 'signup' %}" class="text-blue-400 hover:underline">Sign Up</a>
+            {% endif %}
+        </p>
+    </div>
+
+   
+          <script src="{% static 'js/signloginscripts.js' %}"></script>
+</body>
+</html>
