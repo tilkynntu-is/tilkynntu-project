@@ -17,7 +17,9 @@ def index(request: HttpRequest) -> HttpResponse:
 def htmx_report(request: HttpRequest, report_id: str) -> HttpResponse:
     template = loader.get_template("report_list/htmx_report.html")
     report: Report = Report.objects.get(pk=report_id)
-    print(report)
+    likes: int = Rating.objects.filter(report__id=report.id, is_positive=True).count()
+    dislikes: int = Rating.objects.filter(report__id=report.id, is_positive=False).count()
+    print(likes)
     context: dict = {
         "id": report.id,
         "title": report.title,
@@ -26,6 +28,8 @@ def htmx_report(request: HttpRequest, report_id: str) -> HttpResponse:
         "location": {"lat": report.loc_lat, "lng": report.loc_lng},
         "time_published": report.time_published,
         "image_id": report.image.id,
+        "likes": likes,
+        "dislikes": dislikes,
     }
     return HttpResponse(template.render(context, request))
 
