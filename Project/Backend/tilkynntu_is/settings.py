@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,10 @@ SECRET_KEY = 'django-insecure-4h5m$oa+ub)a#tlqj8n#gz469t00&u@ku(9l*&mqsgelv8=b@^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '10.11.45.231',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -39,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'signin_login_registration',
     'home',
+    'report_maker',
+    'image_endpoint',
+    "report_list",
 ]
 
 MIDDLEWARE = [
@@ -70,6 +77,9 @@ TEMPLATES = [
         },
     },
 ]
+
+MEDIA_URL = '/media/'  # URL for accessing media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory to store uploaded files
 
 WSGI_APPLICATION = 'tilkynntu_is.wsgi.application'
 

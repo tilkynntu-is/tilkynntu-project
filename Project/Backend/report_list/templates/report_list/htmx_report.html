@@ -1,0 +1,21 @@
+<div id="report-{{id}}" class="">
+	<div class="grid-cols-2 grid">
+		<div class="h-full">
+			<div hx-get="/tilkynningar/htmx-image/{{image_id}}" hx-trigger="load" hx-target="this" hx-swap="outerHTML">img</div>
+		</div>
+		<div class="">
+			<h1 class="font-medium text-3xl m-2">{{title}}</h1>
+			<p class="m-2">{{description}}</p>
+			<ul class="m-1">
+				{% for tag in tags %}
+				<li class="inline border-gray-800 bg-cyan-800 rounded m-1 p-1">
+					<span>{{tag.text}}</span>
+				</li>
+				{% endfor %}
+			</ul>
+			<h3 class="ml-2">likes: {{likes}}</h3>
+			<h3 class="ml-2">dislikes: {{dislikes}}</h3>
+		</div>
+	</div>
+	<hr/>
+</div>
