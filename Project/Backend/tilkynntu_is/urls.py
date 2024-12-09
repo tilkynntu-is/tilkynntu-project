@@ -20,7 +20,6 @@ from django.urls import path, include
 from signin_login_registration.views import success_view
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('home.urls')), 
     path('signin/', include('signin_login_registration.urls')),
     path('success/', success_view, name='root-success'), 
