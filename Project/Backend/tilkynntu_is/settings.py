@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'report_maker',
     'image_endpoint',
     "report_list",
+    'report_viewer',
 ]
 
 MIDDLEWARE = [
