@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from django.urls import reverse
 from home.models import *
 
 # Create your views here.
@@ -19,7 +20,6 @@ def htmx_report(request: HttpRequest, report_id: str) -> HttpResponse:
     report: Report = Report.objects.get(pk=report_id)
     likes: int = Rating.objects.filter(report__id=report.id, is_positive=True).count()
     dislikes: int = Rating.objects.filter(report__id=report.id, is_positive=False).count()
-    print(likes)
     context: dict = {
         "id": report.id,
         "title": report.title,
@@ -36,7 +36,8 @@ def htmx_report(request: HttpRequest, report_id: str) -> HttpResponse:
 def htmx_image(request: HttpRequest, image_id: str) -> HttpResponse:
     template = loader.get_template("image.html")
     image = Image.objects.get(pk=image_id)
-    url = request.build_absolute_uri(image.path)
+    base_url = str(request.scheme) + '://' + request.get_host() + '/'
+    url = base_url+image.path
     context: dict = {
         "id": image.id,
         "alt_text": image.alt_text,

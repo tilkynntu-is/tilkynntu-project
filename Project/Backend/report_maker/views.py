@@ -1,8 +1,13 @@
-from django.http import HttpResponse
+from django.core.files.images import ImageFile
+from django.core.files.uploadedfile import UploadedFile
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.http.response import HttpResponseForbidden
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http.request import HttpRequest
 from django.template import loader
+from home.models import Report, Tag, Rating, Comment, Image
+from image_endpoint.models import ImageContainer
+import json
 
 # Create your views here.
 
@@ -39,8 +44,30 @@ def htmx_get_tag(request: HttpRequest) -> HttpResponse:
 
 
 def upload(request: HttpRequest) -> HttpResponse:
-    print(request.POST.get("json"))
     if request.method == "POST":
-        return HttpResponse('OK')
+        request_dict: dict = json.loads(str(request.POST.get("json")))
+        print(request_dict)
+        title: str = request_dict["title"]
+        description: str = request_dict["description"]
+        tag_list: list[Tag] = [Tag.objects.get_or_create(text=tag)[0] for tag in request_dict["tag_list"]]
+        loc_lat: float = request_dict["location"]["lat"]
+        loc_lng: float = request_dict["location"]["lng"]
+
+        if isinstance(request.FILES["image"], UploadedFile):
+            image_file = request.FILES["image"]
+        else:
+            return HttpResponseBadRequest()
+        image = Image()
+        image.create_image(image=image_file, alt_text="")
+        image.save()
+
+        user = request.user
+        print(user)
+        
+        report = Report(user_id=user, loc_lat=loc_lat, loc_lng=loc_lng, title=title, description=description, image=image)
+        report.save()
+        report.tags.set(tag_list)
+
+        return redirect(f"/tilkynningar/#report-{report.id}")
     else:
         return HttpResponseForbidden()
