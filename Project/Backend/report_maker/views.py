@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AnonymousUser, User
 from django.core.files.images import ImageFile
 from django.core.files.uploadedfile import UploadedFile
 from django.http import HttpResponse, HttpResponseBadRequest
@@ -49,7 +50,8 @@ def upload(request: HttpRequest) -> HttpResponse:
         print(request_dict)
         title: str = request_dict["title"]
         description: str = request_dict["description"]
-        tag_list: list[Tag] = [Tag.objects.get_or_create(text=tag)[0] for tag in request_dict["tag_list"]]
+        tag_list: list[Tag] = [Tag.objects.get_or_create(
+            text=tag)[0] for tag in request_dict["tag_list"]]
         loc_lat: float = request_dict["location"]["lat"]
         loc_lng: float = request_dict["location"]["lng"]
 
@@ -61,10 +63,11 @@ def upload(request: HttpRequest) -> HttpResponse:
         image.create_image(image=image_file, alt_text="")
         image.save()
 
-        user = request.user
-        print(user)
-        
-        report = Report(user_id=user, loc_lat=loc_lat, loc_lng=loc_lng, title=title, description=description, image=image)
+        user = request.user if request.user.is_authenticated else User.objects.get_or_create(
+            username="guest", email="guest@example.org")
+
+        report = Report(user_id=user, loc_lat=loc_lat, loc_lng=loc_lng,
+                        title=title, description=description, image=image)
         report.save()
         report.tags.set(tag_list)
 
