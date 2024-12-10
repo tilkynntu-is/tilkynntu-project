@@ -32,7 +32,14 @@ function showMap(lat, lng) {
 
 // Like button functionality
 document.addEventListener('DOMContentLoaded', function () {
-    showMap();
+const la = document.getElementById('lat');
+const lo = document.getElementById('lng');
+const lat = la.textContent; // Gets the content inside the div
+const lng = lo.textContent; // Gets the content inside the div
+console.log(la,lo); // test
+
+    showMap(lat,lng);
+
 
     const likeButton = document.createElement('button');
     likeButton.textContent = "Like";

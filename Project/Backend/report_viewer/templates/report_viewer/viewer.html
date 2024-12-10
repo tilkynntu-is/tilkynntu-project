@@ -66,11 +66,15 @@
                 <p>Please select a report to view its details.</p>
             </div>
         {% endif %}
+        <input id="lat" type="hidden" value="{{reports.0.loc_lat}}">
+        <input id="lng" type="hidden" value="{{reports.0.loc_lng}}">
+
     </main>
 
     {% include 'footer.html' %}
 
-   
+
     <script src="{% static 'js/viewerScripts.js' %}"></script>
+    
 </body>
 </html>
