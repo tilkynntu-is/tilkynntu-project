@@ -71,6 +71,6 @@ def upload(request: HttpRequest) -> HttpResponse:
         report.save()
         report.tags.set(tag_list)
 
-        return redirect(f"/tilkynningar/#report-{report.id}")
+        return redirect(f"/report_viewer/{report.id}")
     else:
         return HttpResponseForbidden()
