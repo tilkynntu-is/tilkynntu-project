@@ -4,7 +4,7 @@
 			<div hx-get="/tilkynningar/htmx-image/{{image_id}}" hx-trigger="load" hx-target="this" hx-swap="outerHTML">img</div>
 		</div>
 		<div class="">
-			<h1 class="font-medium text-3xl m-2">{{title}}</h1>
+			<h1 class="font-medium text-3xl m-2"><a href="/report_viewer/{{id}}">{{title}}</a></h1>
 			<p class="m-2">{{description}}</p>
 			<ul class="m-1">
 				{% for tag in tags %}
