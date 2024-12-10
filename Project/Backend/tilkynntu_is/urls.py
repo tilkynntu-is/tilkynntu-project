@@ -27,4 +27,5 @@ urlpatterns = [
     path('success/', success_view, name='root-success'), 
     path("images/", include("image_endpoint.urls")),
     path("tilkynningar/", include("report_list.urls")),
+    path("report_viewer/", include("report_viewer.urls")),
 ]

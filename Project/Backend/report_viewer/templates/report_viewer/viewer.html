@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Page</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-800 text-white">
+
+    {% include 'header.html' %}
+
+    <main class="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+        {% if reports and reports.0 %}
+            <!--vinstri grid image og map -->
+            <div class="flex flex-col gap-4">
+                <div class="flex-grow flex justify-center items-center h-96">
+                    <img id="post-image" class="w-full h-full object-cover rounded-lg" 
+                         src="{{ reports.0.image.path }}" 
+                         alt="{{ reports.0.image.alt_text }}">
+                </div>
+                    
+                <div class="relative w-full h-64 lg:h-96">
+                    <div id="map" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <!-- hægri grid information-->
+            <div id="post-info" class="flex flex-col gap-2 text-white justify-between">
+                <div class="flex items-center justify-center">
+                    <h1 id="post-title" class="text-lg lg:text-xl font-bold leading-tight">
+                        {{ reports.0.title }}
+                    </h1>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p id="post-information" class="text-sm leading-snug text-center">
+                        {{ reports.0.description }}
+                    </p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p id="post-city" class="text-sm leading-snug text-center">
+                        {{ reports.0.loc_lat }}, {{ reports.0.loc_lng }}
+                    </p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p id="post-date" class="text-sm leading-snug text-center">
+                        {{ reports.0.time_published }}
+                    </p>
+                </div>
+                <div class="flex items-center justify-center flex-wrap gap-1" id="post-tags">
+                    {% for tag in reports.0.tags.all %}
+                        <span class="bg-blue-600 px-2 py-1 rounded-lg">{{ tag.text }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <div class="text-center text-gray-300">
+                <h1 class="text-2xl font-bold">No Report Found</h1>
+                <p>Please select a report to view its details.</p>
+            </div>
+        {% endif %}
+    </main>
+
+    {% include 'footer.html' %}
+
+   
+    <script src="{% static 'js/viewerScripts.js' %}"></script>
+</body>
+</html>
