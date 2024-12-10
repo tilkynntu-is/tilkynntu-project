@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'image_endpoint',
+    "report_list",
     'viewer_reportviewer',  # Added so the viewer works
     'home',
 ]
