@@ -8,4 +8,7 @@ def view_report(request, report_id=None):
             report = Report.objects.get(id=report_id)
         except Report.DoesNotExist:
             report = None
-    return render(request, 'report_viewer/viewer.html', {'reports': [report] if report else []})
+    base_url = str(request.scheme) + '://' + request.get_host() + '/'
+    url = base_url+report.image.path
+    return render(request, 'report_viewer/viewer.html', {'reports': [report] if report else [],"url":url})
+    
