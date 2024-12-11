@@ -120,6 +120,15 @@ _**Who:** A resident sees a large pothole on a busy road.
 ## WireFlows:
 ![wireframe](https://github.com/user-attachments/assets/195fdf20-d5fb-4a4d-8d84-c1ba9d250ef8)
 
+## screenshots
+![home page](images/home_page.png)
+![login successful](images/login_successful.png)
+![report list](images/report_list.png)
+![report maker](images/report_maker.png)
+![report viewer](images/report_viewer.png)
+![sign in](images/signin.png)
+![sign up](signup.png)
+
 
 
 
