@@ -127,7 +127,7 @@ _**Who:** A resident sees a large pothole on a busy road.
 ![report maker](images/report_maker.png)
 ![report viewer](images/report_viewer.png)
 ![sign in](images/signin.png)
-![sign up](signup.png)
+![sign up](images/signup.png)
 
 
 
